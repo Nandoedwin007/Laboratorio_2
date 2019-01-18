@@ -32,6 +32,17 @@ class MostrarPedido : AppCompatActivity() {
         })
 
 
+        val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
+
+        btnLimpiar.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(view: View): Unit {
+                // Handler code here.
+//                val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
+//                startActivity(intent)
+                (applicationContext as MyApplication).mymenuorder.menuOrder.clear()
+            }
+        })
+
         val btninicio = findViewById<Button>(R.id.btnInicio2)
 
         btninicio.setOnClickListener(object: View.OnClickListener {
@@ -44,18 +55,7 @@ class MostrarPedido : AppCompatActivity() {
         })
 
 
-//        val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
-//
-//        btninicio.setOnClickListener(object: View.OnClickListener {
-//            override fun onClick(view: View): Unit {
-//                // Handler code here.
-////                val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
-////                startActivity(intent)
-//                (applicationContext as MyApplication).mymenuorder.clear()
-//            }
-//        })
 
 
-
-    }
+    }//Finaliza onCreate
 }
