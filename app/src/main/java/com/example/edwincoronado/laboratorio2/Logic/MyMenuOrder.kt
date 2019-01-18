@@ -6,7 +6,13 @@ class MyMenuOrder:MenuOrder {
     override fun clear() {
 
     }//Limpiar Pedido
-    override fun add(element: String) {} //Agregar elemento
-    override fun del(elementIndex: Int) {} //Elimina Elemento
-    override fun done() {} //Realiza Pedido
+    override fun add(element: String) {
+        menuOrder.add(element)
+    } //Agregar elemento
+    override fun del(elementIndex: Int) {
+        menuOrder.removeAt(elementIndex)
+    } //Elimina Elemento
+    override fun done() {
+
+    } //Realiza Pedido
 }

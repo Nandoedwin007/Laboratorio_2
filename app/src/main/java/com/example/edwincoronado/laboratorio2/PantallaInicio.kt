@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.graphics.Color
 import android.view.View
 import android.widget.ArrayAdapter
+import com.example.edwincoronado.laboratorio2.Logic.MyApplication
 
 
 class PantallaInicio : AppCompatActivity() {
@@ -33,7 +34,12 @@ class PantallaInicio : AppCompatActivity() {
         setContentView(R.layout.activity_pantalla_inicio)
 
 
+//        var mApp = MyApplication()
+//        var ordenMenu = mApp.mymenuorder
+
+
         val button = findViewById<Button>(R.id.button)
+        val button2 = findViewById<Button>(R.id.button2)
 
 
 
@@ -42,6 +48,14 @@ class PantallaInicio : AppCompatActivity() {
             override fun onClick(view: View): Unit {
                 // Handler code here.
                 val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
+                startActivity(intent)
+            }
+        })
+
+        button2.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(view: View): Unit {
+                // Handler code here.
+                val intent = Intent(this@PantallaInicio, MostrarPedido::class.java)
                 startActivity(intent)
             }
         })

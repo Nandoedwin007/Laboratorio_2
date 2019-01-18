@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".MostrarMenu">
         </activity>
+        <activity android:name=".MostrarPedido">
+        </activity>
     </application>
 
 </manifest>

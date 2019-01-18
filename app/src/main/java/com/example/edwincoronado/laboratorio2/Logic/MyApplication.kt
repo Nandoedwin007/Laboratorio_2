@@ -5,9 +5,12 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import java.util.logging.Logger.global
 
 
 class MyApplication : Application() {
+
+    val mymenuorder = MyMenuOrder()
 
     init {
         instance = this
@@ -21,23 +24,16 @@ class MyApplication : Application() {
 //        }
     }
 
+
     override fun onCreate() {
         super.onCreate()
         // initialize for any
 
 
-        val mymenuorder = MyMenuOrder()
-//        mymenuorder.menuOrder.add("Hamburguesa")
-//        mymenuorder.menuOrder.add("Pizza")
-//        mymenuorder.menuOrder.add("Crepa")
-//        mymenuorder.menuOrder.add("Gaseosa")
-//        mymenuorder.menuOrder.add("Cafe")
 
 
 
 
-        // Use ApplicationContext.
-        // example: SharedPreferences etc...
-        //val context: Context = MyApplication.applicationContext()
+
     }
 }
