@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.graphics.Color
 import android.view.View
-
+import android.widget.ArrayAdapter
 
 
 class PantallaInicio : AppCompatActivity() {
@@ -34,6 +34,8 @@ class PantallaInicio : AppCompatActivity() {
 
 
         val button = findViewById<Button>(R.id.button)
+
+
 
         // Another way to set button click listener
         button.setOnClickListener(object: View.OnClickListener {
