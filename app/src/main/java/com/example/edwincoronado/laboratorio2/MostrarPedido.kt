@@ -21,15 +21,16 @@ class MostrarPedido : AppCompatActivity() {
         val listView:ListView = findViewById(R.id.ltPedido)
         listView.setAdapter(adaptador)
 
-        listView.setOnItemClickListener(object: AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, view: View, position:Int,
-                                     id:Long) {
-                val item = (view as TextView).getText().toString()
-                Toast.makeText(getBaseContext(), "Se ha añaido" +item+ "A la Orden", Toast.LENGTH_LONG).show()
+        adaptador.notifyDataSetChanged()
 
-                (applicationContext as MyApplication).mymenuorder.add(item)
-            }
-        })
+
+//        listView.onItemLongClickListener(object: AdapterView.OnItemLongClickListener {
+//            fun OnItemLongClick(parent: AdapterView<*>, view: View, position:Int,
+//                                     id:Long) {
+//                val item = (view as TextView).getText().toString()
+//                (applicationContext as MyApplication).mymenuorder.del(item)
+//            }
+//        })
 
 
         val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
@@ -53,6 +54,20 @@ class MostrarPedido : AppCompatActivity() {
                 finish()
             }
         })
+
+
+        val btnhacer = findViewById<Button>(R.id.btnHacer)
+
+        btnhacer.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(view: View): Unit {
+                // Handler code here.
+//                val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
+//                startActivity(intent)
+                Toast.makeText(getBaseContext(), "Se ha realizado el pedido", Toast.LENGTH_LONG).show()
+            }
+        })
+
+
 
 
 

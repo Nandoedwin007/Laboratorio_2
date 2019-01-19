@@ -5,6 +5,6 @@ interface MenuOrder {
 
     fun clear() //Limpiar Pedido
     fun add(element: String) //Agregar elemento
-    fun del(elementIndex: Int) //Elimina Elemento
+    fun del(elemento: String) //Elimina Elemento
     fun done() //Realiza Pedido
 }
