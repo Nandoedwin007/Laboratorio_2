@@ -30,7 +30,7 @@ class MostrarMenu : AppCompatActivity() {
             override fun onItemClick(parent:AdapterView<*>, view:View, position:Int,
                             id:Long) {
                 val item = (view as TextView).getText().toString()
-                Toast.makeText(getBaseContext(), "Se ha añaido" +item+ "A la Orden", Toast.LENGTH_LONG).show()
+                Toast.makeText(getBaseContext(), "Se ha añaido " +item+ " a su orden", Toast.LENGTH_LONG).show()
 
                 (applicationContext as MyApplication).mymenuorder.add(item)
             }

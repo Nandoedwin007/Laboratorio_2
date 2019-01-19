@@ -21,16 +21,22 @@ class MostrarPedido : AppCompatActivity() {
         val listView:ListView = findViewById(R.id.ltPedido)
         listView.setAdapter(adaptador)
 
-        adaptador.notifyDataSetChanged()
+        //adaptador.notifyDataSetChanged()
 
 
-//        listView.onItemLongClickListener(object: AdapterView.OnItemLongClickListener {
-//            fun OnItemLongClick(parent: AdapterView<*>, view: View, position:Int,
-//                                     id:Long) {
-//                val item = (view as TextView).getText().toString()
-//                (applicationContext as MyApplication).mymenuorder.del(item)
-//            }
-//        })
+        //listView.setOnItemClickListener()
+
+        listView.setOnItemClickListener(object:AdapterView.OnItemClickListener {
+            override fun onItemClick(parent:AdapterView<*>, view:View, position:Int,
+                                     id:Long) {
+                val item = (view as TextView).getText().toString()
+
+
+                (applicationContext as MyApplication).mymenuorder.del(item)
+
+                Toast.makeText(getBaseContext(), "Se ha REMOVIDO " +item+ " de la orden", Toast.LENGTH_LONG).show()
+            }
+        })
 
 
         val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
@@ -41,6 +47,7 @@ class MostrarPedido : AppCompatActivity() {
 //                val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
 //                startActivity(intent)
                 (applicationContext as MyApplication).mymenuorder.menuOrder.clear()
+                adaptador.notifyDataSetChanged()
             }
         })
 
