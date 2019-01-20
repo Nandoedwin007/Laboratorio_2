@@ -9,6 +9,8 @@ class MyMenuOrder:MenuOrder {
     override fun add(element: String) {
         menuOrder.add(element)
     } //Agregar elemento
+
+    //Cambiamos la función de eliminar elemento de modo a que lo elimine cuando sean iguales y no utilizando su posición
     override fun del(elemento: String) {
         menuOrder.remove(elemento)
     } //Elimina Elemento

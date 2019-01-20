@@ -12,8 +12,10 @@ class MostrarMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mostrar_menu)
 
+        //Creamos un ArrayList para mostrar el Menu Principal
         val menucomida = ArrayList<String>()
 
+        //Agregamos los elemntos al menu principal
         menucomida.add("Hamburguesa")
         menucomida.add("Pizza")
         menucomida.add("Crepa")

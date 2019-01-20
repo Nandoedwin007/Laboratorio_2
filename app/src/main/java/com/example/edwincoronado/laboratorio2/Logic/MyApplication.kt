@@ -10,6 +10,7 @@ import java.util.logging.Logger.global
 
 class MyApplication : Application() {
 
+    //Se genera un Objeto de la clase MyMenuOrder
     val mymenuorder = MyMenuOrder()
 
     init {
@@ -19,18 +20,11 @@ class MyApplication : Application() {
     companion object {
         private var instance: MyApplication? = null
 
-//        fun applicationContext() : Context {
-//            return instance!!.applicationContext
-//        }
     }
 
 
     override fun onCreate() {
         super.onCreate()
-        // initialize for any
-
-
-
 
 
 

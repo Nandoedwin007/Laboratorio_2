@@ -15,9 +15,11 @@ class MostrarPedido : AppCompatActivity() {
 
         val ordenCliente = (applicationContext as MyApplication).mymenuorder.menuOrder
 
-
+        //Definimos un objeto tipo ArrayAdapter
         val adaptador = ArrayAdapter(this,R.layout.simple_list_item_1,ordenCliente)
 
+
+        //Definimos un objeto tipo ListView usando el Id del XML
         val listView:ListView = findViewById(R.id.ltPedido)
         listView.setAdapter(adaptador)
 
@@ -46,7 +48,9 @@ class MostrarPedido : AppCompatActivity() {
             }
         })
 
+        //Definimos un objeto tipo Boton usando el Id del XML
         val btninicio = findViewById<Button>(R.id.btnInicio2)
+
         //Función que termina la activity y regresa a la MainActivity (PantallaInicio)
         btninicio.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
@@ -54,7 +58,7 @@ class MostrarPedido : AppCompatActivity() {
             }
         })
 
-
+        //Definimos un objeto tipo Boton usando el Id del XML
         val btnhacer = findViewById<Button>(R.id.btnHacer)
         //Boton que realiza el pedido y lo notifica con un Toast
         btnhacer.setOnClickListener(object: View.OnClickListener {

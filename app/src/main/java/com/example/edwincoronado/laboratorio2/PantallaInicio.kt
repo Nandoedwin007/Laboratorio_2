@@ -4,16 +4,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-import android.app.Activity
-import android.content.Intent
-import android.util.Log
 
-import android.widget.EditText
-import android.widget.TextView
-import android.graphics.Color
+import android.content.Intent
+
+
+
 import android.view.View
-import android.widget.ArrayAdapter
-import com.example.edwincoronado.laboratorio2.Logic.MyApplication
 
 
 class PantallaInicio : AppCompatActivity() {
@@ -38,7 +34,7 @@ class PantallaInicio : AppCompatActivity() {
 
 
 
-        // Another way to set button click listener
+
         //Funcion que abre la activity de MostrarMenu
         button.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
