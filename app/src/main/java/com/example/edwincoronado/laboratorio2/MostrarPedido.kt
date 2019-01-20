@@ -59,7 +59,10 @@ class MostrarPedido : AppCompatActivity() {
         //Boton que realiza el pedido y lo notifica con un Toast
         btnhacer.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
-                Toast.makeText(getBaseContext(), "Se ha realizado el pedido", Toast.LENGTH_LONG).show()
+
+                Toast.makeText(getBaseContext(), "Se ha realizado el pedido con éxito", Toast.LENGTH_LONG).show()
+                (applicationContext as MyApplication).mymenuorder.menuOrder.clear()
+                adaptador.notifyDataSetChanged()
             }
         })
 
