@@ -21,29 +21,30 @@ class MostrarMenu : AppCompatActivity() {
         menucomida.add("Cafe")
         menucomida.add("Agua Pura")
 
+
+        //Se crea el adaptador para poder hacer un Merge con los datos del ArrayList del menu con el ListView
         val adaptador = ArrayAdapter(this,R.layout.simple_list_item_1,menucomida)
 
         val listView: ListView = findViewById(R.id.LVComida)
+        //Se aplica el adaptador al ListView
         listView.setAdapter(adaptador)
 
+        //Función que agrega los elemntos al ArrayList global (el que se generó el la clase MyApplication)
+        // Ya que este posee la orden actual
         listView.setOnItemClickListener(object:AdapterView.OnItemClickListener {
             override fun onItemClick(parent:AdapterView<*>, view:View, position:Int,
                             id:Long) {
                 val item = (view as TextView).getText().toString()
                 Toast.makeText(getBaseContext(), "Se ha añaido " +item+ " a su orden", Toast.LENGTH_LONG).show()
-
                 (applicationContext as MyApplication).mymenuorder.add(item)
             }
         })
 
-
+    //Función que termina la activity (MostrarMenu) y regresa a la MainActivity (PantallaInicio)
         val btninicio = findViewById<Button>(R.id.btnInicio)
 
                 btninicio.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
-                // Handler code here.
-//                val intent = Intent(this@PantallaInicio, MostrarMenu::class.java)
-//                startActivity(intent)
                 finish()
             }
         })

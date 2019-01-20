@@ -33,17 +33,13 @@ class PantallaInicio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_inicio)
 
-
-//        var mApp = MyApplication()
-//        var ordenMenu = mApp.mymenuorder
-
-
         val button = findViewById<Button>(R.id.button)
         val button2 = findViewById<Button>(R.id.button2)
 
 
 
         // Another way to set button click listener
+        //Funcion que abre la activity de MostrarMenu
         button.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
                 // Handler code here.
@@ -52,6 +48,7 @@ class PantallaInicio : AppCompatActivity() {
             }
         })
 
+        //Funcion que abre la activity de MostrarPedido
         button2.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View): Unit {
                 // Handler code here.
@@ -61,18 +58,5 @@ class PantallaInicio : AppCompatActivity() {
         })
 
     }
-
-
-
-    /*fun launchMostrarMenu(view: View) {
-        Log.d(LOG_TAG, "Button Mostrar Menu clicked!")
-
-        val intent = Intent(this, MostrarMenu::class.java)
-        //val message = editText_main!!.text
-
-        //intent.putExtra(EXTRA_MESSAGE, message)
-        startActivityForResult(intent, TEXT_REQUEST)
-    }*/
-
 
 }
